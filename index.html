@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<title>person</title>
+<h1>QRコード生成</h1>
+<textarea id="url" cols="30" rows="10"></textarea>
+<button onclick="send()">生成</button>
+<script>
+  function send() {
+    value = document.getElementById('url').value
+    if(value != ""){
+      location.href = `/qr?url=${value}`
+    }else{
+      alert("テキストエリアがからです")
+    }
+  }
+</script>
